@@ -1,0 +1,26 @@
+package com.eduardo.solid.models;
+
+import com.eduardo.solid.interfaces.Account;
+import com.eduardo.solid.models.base.AccountBase;
+
+public class CheckingAccount extends AccountBase implements Account  {
+
+    public CheckingAccount(String nameUser, double balance) {
+        super(nameUser, balance);
+    }
+
+    @Override
+    public double getBalance() {
+        return 0;
+    }
+
+    @Override
+    public void deposit(double amount) {
+
+    }
+
+    @Override
+    public void withdraw(double amount) {
+
+    }
+}

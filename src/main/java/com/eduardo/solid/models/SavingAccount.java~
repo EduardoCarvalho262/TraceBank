@@ -1,0 +1,22 @@
+package com.eduardo.solid.models;
+
+import com.eduardo.solid.interfaces.AccountNoWithdrawal;
+
+public class SavingAccount implements AccountNoWithdrawal {
+
+    private int id;
+    private double balance;
+    private String accountNumber;
+    private String accountHolder;
+
+
+    @Override
+    public double getBalance() {
+        return this.balance;
+    }
+
+    @Override
+    public void deposit(double amount) {
+        this.balance += amount;
+    }
+}
