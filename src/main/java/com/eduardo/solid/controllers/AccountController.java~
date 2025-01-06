@@ -3,7 +3,7 @@ package com.eduardo.solid.controllers;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/v1/account")
+@RequestMapping("/v1")
 public class AccountController {
 
     @GetMapping("/ping")
@@ -12,14 +12,9 @@ public class AccountController {
     }
 
     //Cria conta
-    @PostMapping("/create")
+    @PostMapping("/create-account")
     public String createAccount() {
         return "Conta criada com sucesso";
-    }
-
-    @GetMapping("/balance")
-    public String getBalance() {
-        return "Saldo da conta";
     }
 
     //Depositar na conta
@@ -29,14 +24,9 @@ public class AccountController {
     }
 
     //Sacar da conta
-    @PostMapping("/withdraw")
-    public String withdraw() {
-        return "Saque realizado com sucesso";
-    }
 
-    //Desativar Conta
-    @DeleteMapping("/disable")
-    public String disableAccount() {
-        return "Conta desativada com sucesso";
-    }
+
+
+
+
 }

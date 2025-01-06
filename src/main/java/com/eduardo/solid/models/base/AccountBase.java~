@@ -14,7 +14,7 @@ public abstract class AccountBase {
     private double balance;
     private boolean active;
 
-    public AccountBase(String nameUser, double balance) {
+    public AccountBase( String nameUser, double balance) {
         this.nameUser = nameUser;
         this.balance = balance;
         this.accountNumber = generateAccountNumber();
