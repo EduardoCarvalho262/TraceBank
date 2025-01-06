@@ -1,0 +1,17 @@
+package com.eduardo.solid.request;
+
+public enum Type_Account {
+    CHECKING("CHECKING"),
+    INVESTMENT("INVESTMENT");
+
+    private final String value;
+
+    Type_Account(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+}

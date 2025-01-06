@@ -1,20 +1,20 @@
 package com.eduardo.solid.models;
-import com.eduardo.solid.interfaces.Balance;
-import com.eduardo.solid.interfaces.Depositable;
+import com.eduardo.solid.interfaces.AccountNoWithdrawal;
 import com.eduardo.solid.models.base.AccountBase;
+import com.eduardo.solid.request.TypeAccount;
+import lombok.Getter;
+import lombok.Setter;
 
-public class InvestimentAccount extends AccountBase implements Balance, Depositable {
+@Getter
+@Setter
+public class InvestimentAccount extends AccountBase implements AccountNoWithdrawal {
 
-    public InvestimentAccount(String nameUser, double balance) {
-        super(nameUser, balance);
-    }
-    @Override
-    public double getBalance() {
-        return super.getBalance();
+    public InvestimentAccount(String nameUser, TypeAccount typeAccount) {
+        super(nameUser, typeAccount);
     }
 
     @Override
     public void deposit(double amount) {
-        super.setBalance(super.getBalance() + amount);
+        setBalance(getBalance() + amount);
     }
 }
