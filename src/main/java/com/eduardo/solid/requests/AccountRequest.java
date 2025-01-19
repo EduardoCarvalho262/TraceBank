@@ -1,4 +1,4 @@
-package com.eduardo.solid.request;
+package com.eduardo.solid.requests;
 
 import lombok.Getter;
 import lombok.Setter;

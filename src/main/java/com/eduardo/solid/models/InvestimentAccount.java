@@ -1,10 +1,8 @@
 package com.eduardo.solid.models;
 import com.eduardo.solid.interfaces.AccountNoWithdrawal;
 import com.eduardo.solid.models.base.AccountBase;
-import com.eduardo.solid.request.TypeAccount;
+import com.eduardo.solid.requests.TypeAccount;
 import jakarta.persistence.Entity;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class InvestimentAccount extends AccountBase implements AccountNoWithdrawal {

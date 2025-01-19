@@ -1,7 +1,7 @@
 package com.eduardo.solid.controllers;
 
-import com.eduardo.solid.request.AccountRequest;
-import com.eduardo.solid.request.OperationRequest;
+import com.eduardo.solid.requests.AccountRequest;
+import com.eduardo.solid.requests.OperationRequest;
 import com.eduardo.solid.services.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -28,25 +28,26 @@ public class AccountController {
     }
 
     @GetMapping("/balance")
-    public String getBalance(@RequestBody String numberAccount) {
-        return "Saldo da conta";
+    public String getBalance(@RequestParam(value = "numberAccount") String numberAccount) {
+        String balance = _service.getBalance(numberAccount);
+        return "The balance is: " + balance;
     }
 
     //Depositar na conta
     @PostMapping("/deposit")
     public String deposit(@RequestBody OperationRequest body) {
-        return "Deposito realizado com sucesso";
+        return _service.deposit(body.getNumberAccount(), body.getAmount());
     }
 
     //Sacar da conta
     @PostMapping("/withdraw")
     public String withdraw(@RequestBody OperationRequest body) {
-        return "Saque realizado com sucesso";
+        return _service.withdraw(body.getNumberAccount(), body.getAmount());
     }
 
     //Desativar Conta
     @DeleteMapping("/disable")
     public String disableAccount(@RequestBody String numberAccount) {
-        return "Conta desativada com sucesso";
+        return "Account disabled";
     }
 }

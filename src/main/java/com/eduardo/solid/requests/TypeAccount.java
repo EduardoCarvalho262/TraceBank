@@ -1,12 +1,12 @@
-package com.eduardo.solid.request;
+package com.eduardo.solid.requests;
 
-public enum Type_Account {
+public enum TypeAccount {
     CHECKING("CHECKING"),
     INVESTMENT("INVESTMENT");
 
     private final String value;
 
-    Type_Account(String value) {
+    TypeAccount(String value) {
         this.value = value;
     }
 

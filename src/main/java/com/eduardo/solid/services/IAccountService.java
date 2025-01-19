@@ -1,6 +1,6 @@
 package com.eduardo.solid.services;
 
-import com.eduardo.solid.request.AccountRequest;
+import com.eduardo.solid.requests.AccountRequest;
 
 public interface IAccountService {
     public String createAccount(AccountRequest request);

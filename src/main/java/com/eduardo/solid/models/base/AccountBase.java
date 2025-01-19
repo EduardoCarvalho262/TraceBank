@@ -1,6 +1,6 @@
 package com.eduardo.solid.models.base;
 
-import com.eduardo.solid.request.TypeAccount;
+import com.eduardo.solid.requests.TypeAccount;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
