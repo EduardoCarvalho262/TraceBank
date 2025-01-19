@@ -9,15 +9,32 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AccountService {
+public class AccountService implements IAccountService {
 
     private final AccountRepository _repository;
 
+
+    @Override
+    public String getBalance(String numberAccount) {
+
+        return "";
+    }
+
+    @Override
+    public String deposit(String numberAccount, double amount) {
+        return "";
+    }
+
+    @Override
+    public String withdraw(String numberAccount, double amount) {
+        return "";
+    }
+
+    @Override
     public String createAccount(AccountRequest request){
         String result = DiscoverTypeAccount(request);
         return "Account Created! Number Account: " + result;
     }
-
 
 
     private String DiscoverTypeAccount(AccountRequest request) {

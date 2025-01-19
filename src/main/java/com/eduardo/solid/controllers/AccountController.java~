@@ -1,6 +1,5 @@
 package com.eduardo.solid.controllers;
 
-import com.eduardo.solid.models.base.AccountBase;
 import com.eduardo.solid.request.AccountRequest;
 import com.eduardo.solid.request.OperationRequest;
 import com.eduardo.solid.services.AccountService;
@@ -8,9 +7,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+
 @RequestMapping("/v1/account")
-@RequiredArgsConstructor
+@RestController
 public class AccountController {
 
     private final AccountService _service;

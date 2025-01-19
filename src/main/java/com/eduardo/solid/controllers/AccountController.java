@@ -7,8 +7,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+
 @RequestMapping("/v1/account")
+@RestController
 @RequiredArgsConstructor
 public class AccountController {
 

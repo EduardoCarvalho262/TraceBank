@@ -3,7 +3,9 @@ package com.eduardo.solid.models;
 import com.eduardo.solid.interfaces.AccountWithWithdrawal;
 import com.eduardo.solid.models.base.AccountBase;
 import com.eduardo.solid.request.TypeAccount;
+import jakarta.persistence.Entity;
 
+@Entity
 public class CheckingAccount extends AccountBase implements AccountWithWithdrawal {
 
     public CheckingAccount(String nameUser, TypeAccount typeAccount) {
